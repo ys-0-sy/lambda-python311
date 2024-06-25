@@ -15,8 +15,10 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
+          flavor: |
+            latest=true
           images: |
-            lambda-python311-base
+            ys0sy/lambda-python311-base
           tags: |
             type=schedule,pattern={{date 'YYYYMMDD'}}
             type=raw,value=latest
